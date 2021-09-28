@@ -18,16 +18,16 @@ app.get('/', (req, res)=> {
 
 //---------------------------------------------------
 
-const numbers = []
+// const numbers = []
 
-app.get('/api/number', (req, res )=>{
-    const {number} = req.body
-    numbers.push(number)
+// app.post('/api/number', (req, res )=>{
+//     const {number} = req.body
+//     numbers.push(number)
 
-    rollbar.log('The Number has been added!')
-    res.status(200).send(number)
+//     rollbar.log('The Number has been added!')
+//     res.status(200).send(number)
 
-})
+// })
 
 const port = process.env.PORT || 4040
 
