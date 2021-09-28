@@ -13,7 +13,7 @@ const rollbar = new Rollbar({
 
 app.get('/', (req, res)=> {
     res.sendFile(path.join(__dirname, './client/index.html'))
-    rollbar.info('Html was served successfully!')
+    rollbar.info('Dinner is Served!')
 })
 
 
