@@ -16,7 +16,18 @@ app.get('/', (req, res)=> {
     rollbar.info('Dinner is Served!')
 })
 
+//---------------------------------------------------
 
+const numbers = []
+
+app.get('/api/number', (req, res )=>{
+    const {number} = req.body
+    numbers.push(number)
+
+    rollbar.log('The Number has been added!')
+    res.status(200).send(number)
+
+})
 
 const port = process.env.PORT || 4040
 
